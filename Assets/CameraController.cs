@@ -8,6 +8,7 @@ public class CameraController : MonoBehaviour
     GameObject player;
 
     void Start() {
+
         // 最初だけ更新
 
         // GameObjectから"cat"の名前のオブジェクトを探す
@@ -15,6 +16,7 @@ public class CameraController : MonoBehaviour
     }
 
     void Update() {
+
         // 毎回更新
 
         // プレイヤーのポジションを取得

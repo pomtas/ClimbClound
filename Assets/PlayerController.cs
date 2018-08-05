@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     float threshold = 0.2f;     // しきい値
 
     void Start() {
+
         // 初回だけ更新
 
         // 各フックのセット
