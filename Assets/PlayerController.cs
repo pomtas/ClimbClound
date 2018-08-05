@@ -5,14 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
-    Rigidbody2D rigid2D;
-    Animator animator;
-    float jumpForce = 780.0f;
-    float walkForce = 20.0f;
-    float maxWalkSpeed = 2.0f;
-    float threshold = 0.2f;
+    Rigidbody2D rigid2D;        // リジッドボディのフック
+    Animator animator;          // アニメータのフック
+
+    float jumpForce = 780.0f;   // ジャンプ力の値
+    float walkForce = 20.0f;    // 歩行力の値          
+    float maxWalkSpeed = 2.0f;  // 最大歩行速度
+    float threshold = 0.2f;     // しきい値
 
     void Start() {
+        // 各フックのセット
         rigid2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
     }
@@ -21,7 +23,8 @@ public class PlayerController : MonoBehaviour
         // ジャンプする
         if(Input.GetMouseButtonDown(0)&&rigid2D.velocity.y == 0)
         {
-            
+            // y座標が静止状態のときだけジャンプできる
+
             rigid2D.AddForce(transform.up * jumpForce);
         }
 

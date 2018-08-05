@@ -6,8 +6,10 @@ using UnityEngine.SceneManagement; // LoadScene用
 public class ClearDirector : MonoBehaviour
 {
     void Update() {
+        // マウスボタンが押されたら
         if(Input.GetMouseButtonDown(0))
         {
+            // GameSceneに移動
             SceneManager.LoadScene("GameScene");
         }
     }
