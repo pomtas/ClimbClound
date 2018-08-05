@@ -14,14 +14,19 @@ public class PlayerController : MonoBehaviour
     float threshold = 0.2f;     // しきい値
 
     void Start() {
+
+        // 初回だけ更新
+
         // 各フックのセット
         rigid2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
     }
 
     void Update() {
+        // 毎回更新
+
         // ジャンプする
-        if(Input.GetMouseButtonDown(0)&&rigid2D.velocity.y == 0)
+        if (Input.GetMouseButtonDown(0)&&rigid2D.velocity.y == 0)
         {
             // y座標が静止状態のときだけジャンプできる
 
